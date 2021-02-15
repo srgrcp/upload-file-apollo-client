@@ -43,16 +43,6 @@ export default function Home() {
                 }
             }
         `
-        const testQuery = gql`
-            query{
-                PQRSTypes(input: {first: 20}){
-                    nodes{
-                        id
-                        description
-                    }
-                }
-            }
-        `
         client.mutate({
             mutation: uploadExcelMutation,
             variables: { input: { file, groupId: 1 } }
